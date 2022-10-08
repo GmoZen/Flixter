@@ -54,7 +54,7 @@ class MoviesRecyclerViewAdapter(
 
         holder.mItem = movie
         holder.mMovieTitle.text = movie.title
-        holder.mMovieOverview.text = movie.overview
+        holder.mMovieOverview.text = movie.description
 
         Glide.with(holder.mView)
             .load("https://image.tmdb.org/t/p/w500/" + movie.movieImageUrl)

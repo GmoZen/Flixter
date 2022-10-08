@@ -1,5 +1,6 @@
 package com.example.flixter
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -124,8 +125,13 @@ class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
      */
     override fun onItemClick(item: Movie) {
         Toast.makeText(context, "test: " + item.title, Toast.LENGTH_LONG).show()
+
+        val intent = Intent(context, DetailActivity::class.java)
+        intent.putExtra("MOVIE_EXTRA", item)
+//        Log.d("test1: ", item.toString())
+        startActivity(intent)
+
+
     }
 
 }
-
-
